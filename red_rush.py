@@ -6,7 +6,7 @@ time.sleep(6)
 taker=True
 taker1=False
 counter=0
-counter1=0
+counter1=1
 
 
 
