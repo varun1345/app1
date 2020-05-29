@@ -6,7 +6,7 @@ time.sleep(6)
 taker=True
 taker1=False
 counter=0
-counter1=1
+counter1=0
 
 
 
@@ -18,7 +18,7 @@ def function1(taker2,counter2):
                     pyautogui.click(956, 561)
                     counter2 += 1
 
-        if pyautogui.pixelMatchesColor(956, 700, (241, 94, 97)):
+        if pyautogui.pixelMatchesColor(956, 700, (241, 94, 97)) or pyautogui.pixelMatchesColor(956, 700, (92, 162, 216)):
             function2(True,0)
             break
         if counter2 == 0:
@@ -27,10 +27,7 @@ def function1(taker2,counter2):
                     pyautogui.click(956, 561)
                     counter2 += 1
 
-        if pyautogui.pixelMatchesColor(956, 700, (92, 162, 216)):
 
-            function2(True,0)
-            break
 def function2(taker1,counter1):
     while taker1:
         if counter1 == 0:
@@ -38,7 +35,7 @@ def function2(taker1,counter1):
                 if pyautogui.pixelMatchesColor(956, 570, (241, 94, 97)):
                     pyautogui.click(956, 100)
                     counter1 += 1
-        if pyautogui.pixelMatchesColor(960, 370, (241, 94, 97)):
+        if pyautogui.pixelMatchesColor(960, 370, (241, 94, 97)) or pyautogui.pixelMatchesColor(960, 370, (92, 162, 216)):
             function1(True, 0)
             break
 
@@ -48,8 +45,4 @@ def function2(taker1,counter1):
                     pyautogui.click(956, 100)
                     counter1 += 1
 
-        if pyautogui.pixelMatchesColor(960, 370, (92, 162, 216)):
-
-            function1(True,0)
-            break
 function1(taker,counter)
